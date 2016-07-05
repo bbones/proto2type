@@ -7,7 +7,6 @@ export default Ember.Controller.extend({
 	actions : {
 		changeBalanceDetail: function(){
 			this.toggleProperty('balanceDetails');
-			debugger;
 			if (this.balanceDetails) {$("#btnChngBlDt").html(' - ');}
 			else {$("#btnChngBlDt").html(' + ');}
 
