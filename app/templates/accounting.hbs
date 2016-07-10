@@ -19,6 +19,15 @@
 		<td><button id="btnChngBlDt" {{action "changeBalanceDetail"}}> + </button></td>
 	</tr>
 
+	{{#each model as |balstr|}}
+	  <article class="listing">
+	    <h3>{{balstr.name}}</h3>
+	    <div class="detail owner">
+	      <span>Amount:</span> {{balstr.amount}}
+	    </div>
+	  </article>
+	{{/each}}
+	
 	{{#if balanceDetails}}
 
 	<tr>

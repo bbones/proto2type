@@ -1,14 +1,29 @@
 export default function() {
-  this.get('/balances', function() {
+  this.get('/balance-strings', function() {
     return {
       data: [{
-        type : 'balances',
+        type : 'balance-strings',
         id: 1,
-        attrbutes: {
-          active : 100,
-          liabilities : 80,
-          equity: 20
+        attributes: {
+          name : "Assets",
+          amount : 100
         }
+      }, {
+        type : 'balance-strings',
+        id: 2,
+        attributes: {
+          name : "Liabilities",
+          amount : 80
+        }
+
+      }, {
+        type : 'balance-strings',
+        id: 3,
+        attributes: {
+          name : "Equity",
+          amount : 20
+        }
+
       }]
     };
   });
