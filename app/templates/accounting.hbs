@@ -1,46 +1,6 @@
 <h2>Balance</h2>
 
-
-<table id="balance">
-	<tr>
-		<th>Assets</th>
-		<th>=</th>
-		<th>Equity</th>
-		<th>+</th>
-		<th>Liability</th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>100</td>
-		<td/>
-		<td>10</td>
-		<td/>
-		<td>80</td>
-		<td><button id="btnChngBlDt" {{action "changeBalanceDetail"}}> + </button></td>
-	</tr>
-
-	{{#each model as |balstr|}}
-	  <article class="listing">
-	    <h3>{{balstr.name}}</h3>
-	    <div class="detail owner">
-	      <span>Amount:</span> {{balstr.amount}}
-	    </div>
-	  </article>
-	{{/each}}
-	
-	{{#if balanceDetails}}
-
-	<tr>
-		<td>50</td>
-		<td/>
-		<td>20</td>
-		<td/>
-		<td>10</td>
-		<td></td>
-	</tr>
-
-	{{/if}}
-</table>
+{{tree-grid data=model}}
 
 <h2>Account list <button {{action "changeAccountList"}}> + </button></h2>
 {{#if accountList}}
@@ -51,4 +11,7 @@
 		<th>Current amount</th>
 	</tr>
 </table>
+
+<button {{action "toggleBody"}}>Show Body</button>
+
 {{/if}}

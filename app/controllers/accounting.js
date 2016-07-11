@@ -14,6 +14,11 @@ export default Ember.Controller.extend({
 
 		changeAccountList: function() {
 			this.toggleProperty('accountList');
-		}
+		},
+
+		toggleBody() {
+		 console.log('Pressed');
+	 	}
+
 	}
 });
