@@ -6,7 +6,18 @@ export default function() {
         id: 1,
         attributes: {
           name : "Assets",
-          amount : 100
+          amount : 100,
+          parent : null,
+          subs : [{
+            type : 'balance-strings',
+            id: 4,
+            attributes: {
+              name : "Cash",
+              amount : 100,
+              parent : 1,
+              subs : null
+            }
+          }]
         }
       }, {
         type : 'balance-strings',
