@@ -17,7 +17,9 @@ export default Ember.Controller.extend({
 		},
 
 		toggleBody() {
-		 console.log('Pressed');
+		 console.log('model');
+		 console.log(this.model);
+		 console.log(this.model.content);
 	 	}
 
 	}

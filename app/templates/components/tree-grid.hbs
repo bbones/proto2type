@@ -12,14 +12,15 @@
       <tr>
         <td class="tree-item-capture">{{linedata.name}}</td>
         <td>{{linedata.amount}}</td>
-        <td>{{linedata.id}}</td>
       </tr>
+      {{#if linedata.subs}}
       {{#each linedata.subs as |sub|}}
         <tr>
-          <td class="tree-item-capture">{{sub.id}}</td>
+          <td class="tree-item-capture"> -- {{sub.name}}</td>
           <td>{{sub.amount}}</td>
         </tr>
       {{/each}}
+      {{/if}}
     {{/each}}
   </table>
 </article>
