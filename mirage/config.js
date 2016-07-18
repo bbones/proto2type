@@ -8,16 +8,18 @@ export default function() {
           name : "Assets",
           amount : 100,
           parent : null,
-          subs : [{
-            type : 'balance-strings',
-            id: 4,
-            attributes: {
-              name : "Cash",
-              amount : 100,
-              parent : 1,
-              subs : null
-            }
-          }]
+          subs : {
+            data: [{
+              type : 'balance-strings',
+              id: 4,
+              attributes: {
+                name : "Cash",
+                amount : 100,
+                parent : 1,
+                subs : null
+              }
+            }]
+          }
         }
       }, {
         type : 'balance-strings',
@@ -36,6 +38,14 @@ export default function() {
         }
 
       }]
+    };
+  });
+  this.get('/users', function(db, request){
+    // console.log(db.db.users);
+    return {
+      data : db.db.users.map(attrs => (
+        { type: 'users', id: attrs.id, attributes: attrs }
+      ))
     };
   });
 }
