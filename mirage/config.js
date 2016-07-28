@@ -4,23 +4,21 @@ export default function() {
       data: [{
         type : 'balance-strings',
         id: 1,
-        attributes: {
-          name : "Assets",
-          amount : 100,
-          parent : null,
-          subs : {
-            data: [{
-              type : 'balance-strings',
-              id: 4,
-              attributes: {
-                name : "Cash",
-                amount : 100,
-                parent : 1,
-                subs : null
+        attributes: { name : "Assets", amount : 100 },
+        included: [{
+          subs: {
+            data: [
+              {
+                type : 'balance-strings',
+                id: 4,
+                attributes: {
+                      name : "Cash",
+                      amount : 100
+                }
               }
-            }]
+            ]
           }
-        }
+        }]
       }, {
         type : 'balance-strings',
         id: 2,
@@ -40,7 +38,7 @@ export default function() {
       }]
     };
   });
-  this.get('/users', function(db, request){
+  this.get('/users', function(db){
     // console.log(db.db.users);
     return {
       data : db.db.users.map(attrs => (

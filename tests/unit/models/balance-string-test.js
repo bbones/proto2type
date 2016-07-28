@@ -7,6 +7,8 @@ moduleForModel('balance-string', 'Unit | Model | balance string', {
 
 test('it exists', function(assert) {
   let model = this.subject();
+  console.log('model->');
+  console.log(model);
   // let store = this.store();
   assert.ok(!!model);
 });
