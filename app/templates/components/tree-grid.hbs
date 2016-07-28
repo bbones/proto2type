@@ -12,17 +12,11 @@
       <tr>
         <td class="tree-item-capture">{{linedata.name}}</td>
         <td>{{linedata.amount}}</td>
-        <td>{{linedata.subs}}</td>
       </tr>
       {{#each linedata.subs as |sub|}}
         <tr>
           <td class="tree-item-capture"> -- {{sub.name}}</td>
           <td>{{sub.amount}}</td>
-        </tr>
-      {{else}}
-        <tr>
-          <td>No Subs</td>
-          <td>No Subs</td>
         </tr>
       {{/each}}
     {{/each}}

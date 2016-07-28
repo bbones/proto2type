@@ -5,20 +5,11 @@ export default function() {
         type : 'balance-strings',
         id: 1,
         attributes: { name : "Assets", amount : 100 },
-        included: [{
+        relationships: {
           subs: {
-            data: [
-              {
-                type : 'balance-strings',
-                id: 4,
-                attributes: {
-                      name : "Cash",
-                      amount : 100
-                }
-              }
-            ]
+            data : [{type : 'balance-strings',id: 4}]
           }
-        }]
+        }
       }, {
         type : 'balance-strings',
         id: 2,
@@ -35,7 +26,20 @@ export default function() {
           amount : 20
         }
 
-      }]
+      }, {
+          type : 'balance-strings',
+          id: 4,
+          attributes: {
+            name : "Cash",
+            amount : 100
+          },
+          relationships: {
+            parent: {
+              data : {type : 'balance-strings',id: 1}
+            }
+          }
+
+        }]
     };
   });
   this.get('/users', function(db){
