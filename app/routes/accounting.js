@@ -11,7 +11,8 @@ export default Ember.Route.extend({
     //     {id : 3, name : "Liabilities", amount : 80}
     //   ];
     // return this.get('store').findAll('balance-string');
-    var res = this.get('store').query('balance-string', { filter: { parent: null } });
+    var res = this.get('store').query('balance-string',
+        { filter: { id: 2 } });
     console.log(res);
     return res;
   } // model
