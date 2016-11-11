@@ -1,6 +1,12 @@
 # Proto2type
 
+## Questions
+* From mirage to real data
+* Site navigation
+* Pop-up menu https://www.npmjs.com/package/ember-popup-menu
+
 ## Test datasource - ember mirage
+http://www.ember-cli-mirage.com/
 config.js - direct mapping URI to data
 data format - JSON API http://jsonapi.org/
 

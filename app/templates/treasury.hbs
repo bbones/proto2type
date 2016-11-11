@@ -1,9 +1,25 @@
 <h2>Treasury</h2>
 
-<h3>Liabilities</h3>
+<div>
+	{{#link-to 'costcenters' class="button"}}
+    Costcenters
+  {{/link-to}}
 
-{{tree-grid data=model}}
+	{{#link-to 'enterprises' class="button"}}
+    Enterprises
+  {{/link-to}}
 
-<h3>Payments</h3>
+	{{#link-to 'persons' class="button"}}
+		Persons
+	{{/link-to}}
+</div>
 
-<button {{action "toggleBody"}}>Show Body</button>
+<div>
+  <h3>Liabilities</h3>
+
+  {{tree-grid data=model}}
+
+  <h3>Payments</h3>
+
+  <button {{action "toggleBody"}}>Show Body</button>
+</div>

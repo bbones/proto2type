@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('contact');
   this.route('users');
   this.route('treasury');
+  this.route('costcenters');
+  this.route('enterprises');
+  this.route('persons');
 });
 
 export default Router;

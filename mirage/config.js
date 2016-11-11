@@ -50,4 +50,15 @@ export default function() {
       ))
     };
   });
+
+  this.get('/costcenters', function() {
+    return {
+      data : [
+        {name : 'DMKD'},
+        {name : 'AMK'},
+        {name : 'ISD'},
+        {name : 'HC'},
+        {name : 'DUNAFER'}]
+    }
+  });
 }
