@@ -1,15 +1,9 @@
 <h2>Treasury</h2>
 
+<h3>Liabilities</h3>
+
 {{tree-grid data=model}}
 
-<h2>Account list <button {{action "changeAccountList"}}> + </button></h2>
-{{#if accountList}}
-<table id="accountList">
-	<tr>
-		<th>Account</th>
-		<th>Description</th>
-		<th>Current amount</th>
-	</tr>
-</table>
-{{/if}}
+<h3>Payments</h3>
+
 <button {{action "toggleBody"}}>Show Body</button>
