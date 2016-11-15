@@ -1,1 +1,12 @@
-{{outlet}}
+<h2>Enterprises list</h2>
+
+<table id="accountList">
+	<tr>
+		<th>Name</th>
+	</tr>
+  {{#each model as |enterprisedata|}}
+  <tr>
+    <td class="tree-item-capture">{{enterprisedata.name}}</td>
+  </tr>
+  {{/each}}
+</table>

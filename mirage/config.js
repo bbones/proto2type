@@ -51,6 +51,14 @@ export default function() {
     };
   });
 
+  this.get('/enterprises', function(db){
+    return {
+      data : db.db.enterprises.map(attrs => (
+        { type: 'enterprise', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
+
   this.get('/costcenters', function() {
     return {
       data : [
@@ -59,6 +67,6 @@ export default function() {
         {name : 'ISD'},
         {name : 'HC'},
         {name : 'DUNAFER'}]
-    }
+    };
   });
 }

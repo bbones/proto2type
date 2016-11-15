@@ -8,4 +8,6 @@ export default function(server) {
   */
   console.log('generating users');
   server.createList('user', 10);
+  console.log('generating enterprises');
+  server.createList('enterprises', 25);
 }

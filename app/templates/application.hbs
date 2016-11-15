@@ -17,7 +17,7 @@
        <li>{{#link-to "payments"}}Payments{{/link-to}}</li>
      {{/bs-dropdown-menu}}
    {{/bs-dropdown}}
-      {{#bs-nav-item}}{{#link-to "accounting"}}Accounting{{/link-to}}{{/bs-nav-item}}
+
       {{#bs-dropdown tagName="li"}}
        {{#bs-dropdown-toggle}}Master Data<span class="caret"></span>{{/bs-dropdown-toggle}}
        {{#bs-dropdown-menu}}
@@ -25,6 +25,14 @@
          <li>{{#link-to "enterprises"}}Enterprises{{/link-to}}</li>
        {{/bs-dropdown-menu}}
      {{/bs-dropdown}}
+
+     {{#bs-dropdown tagName="li"}}
+      {{#bs-dropdown-toggle}}Service<span class="caret"></span>{{/bs-dropdown-toggle}}
+      {{#bs-dropdown-menu}}
+        <li>{{#link-to "users"}}Users{{/link-to}}</li>
+      {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+
      {{#bs-dropdown tagName="li"}}
       {{#bs-dropdown-toggle}}About<span class="caret"></span>{{/bs-dropdown-toggle}}
       {{#bs-dropdown-menu}}
