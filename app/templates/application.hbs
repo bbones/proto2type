@@ -1,32 +1,42 @@
-<div class="container">
-  <div class="menu">
-    {{#link-to 'index'}}
-      <h1 class="left">
-        <em>Proto2Type</em>
-      </h1>
-    {{/link-to}}
-    <div class="left links">
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
-      {{#link-to 'accounting'}}
-        Accounting
-      {{/link-to}}
-      {{#link-to 'treasury'}}
-        Treasury
-      {{/link-to}}
-      {{#link-to 'users'}}
-        Users
-      {{/link-to}}
-    </div>
+{{#bs-navbar}}
+  <div class="navbar-header">
+    {{#bs-navbar-toggle}}
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    {{/bs-navbar-toggle}}
+    <a class="navbar-brand" href="#">ISD Corp</a>
   </div>
-  <div class="body">
-    {{outlet}}
-  </div>
-</div>
+  {{#bs-navbar-content}}
+    {{#bs-navbar-nav}}
+    {{#bs-dropdown tagName="li"}}
+     {{#bs-dropdown-toggle}}Treasury<span class="caret"></span>{{/bs-dropdown-toggle}}
+     {{#bs-dropdown-menu}}
+       <li>{{#link-to "liabilities"}}Liabilities{{/link-to}}</li>
+       <li>{{#link-to "payments"}}Payments{{/link-to}}</li>
+     {{/bs-dropdown-menu}}
+   {{/bs-dropdown}}
+      {{#bs-nav-item}}{{#link-to "accounting"}}Accounting{{/link-to}}{{/bs-nav-item}}
+      {{#bs-dropdown tagName="li"}}
+       {{#bs-dropdown-toggle}}Master Data<span class="caret"></span>{{/bs-dropdown-toggle}}
+       {{#bs-dropdown-menu}}
+         <li>{{#link-to "persons"}}Persons{{/link-to}}</li>
+         <li>{{#link-to "enterprises"}}Enterprises{{/link-to}}</li>
+       {{/bs-dropdown-menu}}
+     {{/bs-dropdown}}
+     {{#bs-dropdown tagName="li"}}
+      {{#bs-dropdown-toggle}}About<span class="caret"></span>{{/bs-dropdown-toggle}}
+      {{#bs-dropdown-menu}}
+        <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
+      {{/bs-dropdown-menu}}
+    {{/bs-dropdown}}
+    {{/bs-navbar-nav}}
+  {{/bs-navbar-content}}
+{{/bs-navbar}}
+
+{{outlet}}
+
 <footer>
  &copy; 2016 Valentin Pogrebinsky
 </footer>

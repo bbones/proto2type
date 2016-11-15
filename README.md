@@ -5,6 +5,9 @@
 * Site navigation
 * Pop-up menu https://www.npmjs.com/package/ember-popup-menu
 
+# Widgets
+http://kaliber5.github.io/ember-bootstrap/getting-started/
+
 ## Test datasource - ember mirage
 http://www.ember-cli-mirage.com/
 config.js - direct mapping URI to data

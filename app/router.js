@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('costcenters');
   this.route('enterprises');
   this.route('persons');
+  this.route('liabilities');
+  this.route('payments');
 });
 
 export default Router;
