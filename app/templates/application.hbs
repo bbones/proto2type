@@ -10,35 +10,36 @@
   </div>
   {{#bs-navbar-content}}
     {{#bs-navbar-nav}}
-    {{#bs-dropdown tagName="li"}}
-     {{#bs-dropdown-toggle}}Treasury<span class="caret"></span>{{/bs-dropdown-toggle}}
-     {{#bs-dropdown-menu}}
-       <li>{{#link-to "liabilities"}}Liabilities{{/link-to}}</li>
-       <li>{{#link-to "payments"}}Payments{{/link-to}}</li>
-     {{/bs-dropdown-menu}}
-   {{/bs-dropdown}}
-
       {{#bs-dropdown tagName="li"}}
-       {{#bs-dropdown-toggle}}Master Data<span class="caret"></span>{{/bs-dropdown-toggle}}
-       {{#bs-dropdown-menu}}
-         <li>{{#link-to "persons"}}Persons{{/link-to}}</li>
-         <li>{{#link-to "enterprises"}}Enterprises{{/link-to}}</li>
-       {{/bs-dropdown-menu}}
-     {{/bs-dropdown}}
-
-     {{#bs-dropdown tagName="li"}}
-      {{#bs-dropdown-toggle}}Service<span class="caret"></span>{{/bs-dropdown-toggle}}
-      {{#bs-dropdown-menu}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
-      {{/bs-dropdown-menu}}
+        {{#bs-dropdown-toggle}}Treasury<span class="caret"></span>{{/bs-dropdown-toggle}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to "liabilities"}}Liabilities{{/link-to}}</li>
+          <li>{{#link-to "payments"}}Payments{{/link-to}}</li>
+          <li>{{#link-to "cflines"}}Cash Flow lines{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
       {{/bs-dropdown}}
 
-     {{#bs-dropdown tagName="li"}}
-      {{#bs-dropdown-toggle}}About<span class="caret"></span>{{/bs-dropdown-toggle}}
-      {{#bs-dropdown-menu}}
-        <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
-      {{/bs-dropdown-menu}}
-    {{/bs-dropdown}}
+      {{#bs-dropdown tagName="li"}}
+        {{#bs-dropdown-toggle}}Master Data<span class="caret"></span>{{/bs-dropdown-toggle}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to "persons"}}Persons{{/link-to}}</li>
+          <li>{{#link-to "enterprises"}}Enterprises{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+
+      {{#bs-dropdown tagName="li"}}
+        {{#bs-dropdown-toggle}}Service<span class="caret"></span>{{/bs-dropdown-toggle}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+
+      {{#bs-dropdown tagName="li"}}
+        {{#bs-dropdown-toggle}}About<span class="caret"></span>{{/bs-dropdown-toggle}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
     {{/bs-navbar-nav}}
   {{/bs-navbar-content}}
 {{/bs-navbar}}

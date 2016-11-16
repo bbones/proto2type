@@ -1,45 +1,18 @@
 export default function() {
-  this.get('/balance-strings', function() {
+
+  this.get('/cflines', function(db) {
     return {
-      data: [{
-        type : 'balance-strings',
-        id: 1,
-        attributes: { name : "Assets", amount : 100 },
-        relationships: {
-          subs: {
-            data : [{type : 'balance-strings',id: 4}]
-          }
-        }
-      }, {
-        type : 'balance-strings',
-        id: 2,
-        attributes: {
-          name : "Liabilities",
-          amount : 80
-        }
+      data : db.db.cflines.map(attrs => (
+        { type: 'cflines', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
 
-      }, {
-        type : 'balance-strings',
-        id: 3,
-        attributes: {
-          name : "Equity",
-          amount : 20
-        }
-
-      }, {
-          type : 'balance-strings',
-          id: 4,
-          attributes: {
-            name : "Cash",
-            amount : 100
-          },
-          relationships: {
-            parent: {
-              data : {type : 'balance-strings',id: 1}
-            }
-          }
-
-        }]
+  this.get('/balance-lines', function(db) {
+    return {
+      data : db.db.balanceLines.map(attrs => (
+        { type: 'balance-lines', id: attrs.id, attributes: attrs }
+      ))
     };
   });
   this.get('/users', function(db){

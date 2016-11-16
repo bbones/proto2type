@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('persons');
   this.route('liabilities');
   this.route('payments');
+  this.route('cflines');
 });
 
 export default Router;

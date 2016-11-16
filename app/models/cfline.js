@@ -4,7 +4,6 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   name : attr('String'),
-  amount : attr('number'),
-  subs : hasMany('balance-string', { inverse: 'parent' }),
-  parent : belongsTo('balance-string', { inverse: 'subs' })
+  subs : hasMany('cfline', { inverse: 'parent' }),
+  parent : belongsTo('cfline', { inverse: 'subs' })
 });
