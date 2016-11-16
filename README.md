@@ -2,8 +2,12 @@
 
 ## Questions
 * From mirage to real data
-* Site navigation
 * Pop-up menu https://www.npmjs.com/package/ember-popup-menu
+### Fake data
+* mirage for liabilities
+
+## Done!
+* Site navigation
 
 # Widgets
 http://kaliber5.github.io/ember-bootstrap/getting-started/
