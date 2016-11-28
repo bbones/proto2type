@@ -4,17 +4,13 @@
 	<tr>
     <th>id</th>
 		<th>Name</th>
+    <th>Parent</th>
 	</tr>
   {{#each model as |cflines|}}
   <tr>
     <td class="tree-item-capture">{{cflines.id}}</td>
     <td class="tree-item-capture">{{cflines.name}}</td>
+    <td class="tree-item-capture">{{cflines.subs.content.record}}</td>
   </tr>
   {{/each}}
 </table>
-
-{{crud-table
-  fields=fieldDefinition
-  deleteRecord='delete'
-  updateRecord='update'
-  createRecord='create'}}
