@@ -1,6 +1,7 @@
 export default function() {
 
-  this.get('/cflines', function(db) {
+  this.get('/cflines', function(db, request) {
+    console.log('mirage->' + request);
     return {
       data : db.db.cflines.map(attrs => (
         { type: 'cflines', id: attrs.id, attributes: attrs }

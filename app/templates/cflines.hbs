@@ -10,7 +10,9 @@
   <tr>
     <td class="tree-item-capture">{{cflines.id}}</td>
     <td class="tree-item-capture">{{cflines.name}}</td>
-    <td class="tree-item-capture">{{cflines.subs.content.record}}</td>
+    <td class="tree-item-capture">{{cflines.parentId}}</td>
   </tr>
   {{/each}}
 </table>
+
+<h3><button {{action "printModel"}}>Print model</button></h3>
