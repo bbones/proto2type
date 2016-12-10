@@ -1,13 +1,22 @@
 export default function() {
 
   this.get('/cflines', function(db, request) {
-    console.log('mirage->' + request);
+    console.log(request.queryParams);
     return {
       data : db.db.cflines.map(attrs => (
         { type: 'cflines', id: attrs.id, attributes: attrs }
       ))
     };
   });
+
+  this.get('/liabilities', function(db, request) {
+    return {
+      data : db.db.liabilities.map(attrs => (
+        { type: 'liabilities', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
+
 
   this.get('/balance-lines', function(db) {
     return {

@@ -2,11 +2,13 @@
 
 <table id="accountList">
 	<tr>
+		<th>Id</th>
 		<th>Name</th>
 	</tr>
-  {{#each model as |enterprisedata|}}
+  {{#each model as |enterprise|}}
   <tr>
-    <td class="tree-item-capture">{{enterprisedata.name}}</td>
+		<td class="tree-item-capture">{{enterprise.id}}</td>
+    <td class="tree-item-capture">{{enterprise.name}}</td>
   </tr>
   {{/each}}
 </table>
