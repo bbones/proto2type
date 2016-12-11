@@ -10,7 +10,9 @@
   <tr>
 		<td>{{liability.id}}</td>
     <td>{{liability.amount}}</td>
-		<td>{{liability.party_id}}</td>
+		<td>{{liability.enterprise.name}}</td>
   </tr>
   {{/each}}
 </table>
+
+<h3><button {{action "printModel"}}>Print model</button></h3>
