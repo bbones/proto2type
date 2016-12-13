@@ -1,13 +1,6 @@
 export default function() {
 
-  this.get('/cflines', function(db, request) {
-    console.log(request.queryParams);
-    return {
-      data : db.db.cflines.map(attrs => (
-        { type: 'cflines', id: attrs.id, attributes: attrs }
-      ))
-    };
-  });
+  this.get('/cflines');
 
   this.get('/liabilities');
 

@@ -6,11 +6,11 @@
 		<th>Name</th>
     <th>Parent</th>
 	</tr>
-  {{#each model as |cflines|}}
+  {{#each model.cflines as |cflines|}}
   <tr>
     <td class="tree-item-capture">{{cflines.id}}</td>
     <td class="tree-item-capture">{{cflines.name}}</td>
-    <td class="tree-item-capture">{{cflines.parent}}</td>
+    <td class="tree-item-capture">{{cflines.parent.name}}</td>
   </tr>
   {{/each}}
 </table>
