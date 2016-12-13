@@ -6,7 +6,7 @@
 		<th>Amount</th>
 		<th>Party</th>
 	</tr>
-  {{#each model as |liability|}}
+  {{#each model.liabilities as |liability|}}
   <tr>
 		<td>{{liability.id}}</td>
     <td>{{liability.amount}}</td>

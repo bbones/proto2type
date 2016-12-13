@@ -4,5 +4,5 @@ import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   name : attr('String'),
-  liabilities : hasMany('liability', { inverse: null })
+  liabilities : hasMany('liability')
 });

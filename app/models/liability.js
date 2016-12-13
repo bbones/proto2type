@@ -4,5 +4,5 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default DS.Model.extend({
     amount : attr('number'),
-    enterprise : belongsTo('enterprise', { inverse: null })
+    enterprise : belongsTo('enterprise')
 });

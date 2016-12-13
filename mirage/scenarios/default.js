@@ -16,4 +16,5 @@ export default function(server) {
   server.loadFixtures('enterprises');
   console.log('loading liabilities');
   server.loadFixtures('liabilities');
+  console.log(server.db.liabilities);
 }

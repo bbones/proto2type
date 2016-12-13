@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.get('store').findAll('liability', {include: 'enterprise'});
+    return Ember.RSVP.hash({
+      liabilities : this.store.findAll('liability', {include : 'enterprise'}),
+      enterprise : this.store.findAll('enterprise')
+    });
   }
 });

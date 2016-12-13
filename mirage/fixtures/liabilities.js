@@ -1,29 +1,9 @@
 export default [
-  {
-    "amount": "-452481.98",
-    "enterpriseId": 3,
-    "id": 0
-  },
-  {
-    "amount": "-39877.83",
-    "enterpriseId": 5,
-    "id": 1
-  },
-  {
-    "amount": "-231895.57",
-    "enterpriseId": 2,
-    "id": 2
-  },
-  {
-    "amount": "-722456.53",
-    "enterpriseId": 10,
-    "id": 3
-  },
-  {
-    "amount": "698833.1",
-    "enterpriseId": 10,
-    "id": 4
-  },
+  { "amount": "-452481.98", "enterpriseId": 3, "id": 0  },
+  { "amount": "-39877.83", "enterpriseId": 5, "id": 1 },
+  { "amount": "-231895.57", "enterpriseId": 2, "id": 2 },
+  { "amount": "-722456.53", "enterpriseId": 10,"id": 3 },
+  { "amount": "698833.1", "enterpriseId": 10, "id": 4  },
   {
     "amount": "102840.66",
     "enterpriseId": 6,
