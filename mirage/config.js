@@ -9,14 +9,7 @@ export default function() {
     };
   });
 
-  this.get('/liabilities', function(db) {
-    console.log(db.db.liabilities);
-    return {
-      data : db.db.liabilities.map(attrs => (
-        { type: 'liabilities', id: attrs.id, attributes: attrs }
-      ))
-    };
-  });
+  this.get('/liabilities');
 
 
   this.get('/balance-lines', function(db) {

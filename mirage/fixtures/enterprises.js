@@ -9,5 +9,6 @@ export default [
   { "name": "Viocular", "id": 7},
   { "name": "Melbacor", "id": 8 },
   { "name": "Lunchpod", "id": 9 },
-  { "name": "Sustenza", "id": 10 }
+  { "name": "Sustenza", "id": 10 },
+  { "name": "Umbrella Corp", "id": 11 },
 ];
