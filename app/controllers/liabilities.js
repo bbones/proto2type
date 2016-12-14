@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
     newLiability() {
       this.toggleProperty('isNewLiab');
     },
+    editLiab(liability) {
+      console.log('Edit liab', liability.id);
+    },
     deleteLiab(liability) {
       console.log(liability.id, liability.get('enterprise.name'));
       liability.destroyRecord();
