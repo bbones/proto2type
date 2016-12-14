@@ -1,7 +1,7 @@
 export default function(server) {
 
   // Makes debugging easier
-  window.mirage = server
+  window.mirage = server;
 
   /*
     Seed your development database using your factories.

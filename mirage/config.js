@@ -4,6 +4,8 @@ export default function() {
 
   this.get('/liabilities');
 
+  this.delete('/liabilities/:id');
+
 
   this.get('/balance-lines', function(db) {
     return {

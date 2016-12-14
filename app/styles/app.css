@@ -1,9 +1,9 @@
 td {
-    text-align: right;
+    text-align: left;
 }
 
-table {
-    border-collapse: collapse;
+th {
+    text-align: center;
 }
 
 table, th, td {

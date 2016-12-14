@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  // this.isNewLiab = false;
   actions: {
-    printModel() {
-      console.log(this.get('store').findAll('liability'));
+    newLiability() {
+      this.toggleProperty('isNewLiab');
+    },
+    deleteLiab(liability) {
+      console.log(liability.id, liability.get('enterprise.name'));
+      liability.destroyRecord();
     }
+
   }
 });
