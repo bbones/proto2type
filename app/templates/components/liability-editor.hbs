@@ -1,1 +1,18 @@
+<div class="panel panel-info">
+  <div class="panel-heading">Liability details</div>
+
+    {{liability.enterprise.name}}
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Amount:</button>
+          </span>
+          {{input type="text" class="form-control" placeholder="0.0..."
+              value=liability.amount}}
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div>
+</div>
+
 {{yield}}

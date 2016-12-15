@@ -8,6 +8,8 @@ export default Ember.Controller.extend({
     },
     editLiab(liability) {
       console.log('Edit liab', liability.id);
+      this.set('isNewLiab', true);
+      this.set('liabToEdit', liability);
     },
     deleteLiab(liability) {
       console.log(liability.id, liability.get('enterprise.name'));

@@ -22,6 +22,9 @@ http://opensource.addepar.com/ember-table/ suspended
 
 http://onechiporenko.github.io/ember-models-table
 
+## Regular lib version updates
+npm-check-updates -u
+
 ## Test datasource - ember mirage
 http://www.ember-cli-mirage.com/
 config.js - direct mapping URI to data

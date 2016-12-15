@@ -34,10 +34,6 @@
 	<button {{action "newLiability"}}
 		type="button" class="btn btn-primary">New liability</button>
 	{{#if isNewLiab}}
-    <div class="panel panel-info">
-      <div class="panel-heading">Liability details</div>
-
-        Errare humanum est
-    </div>
+    {{liability-editor liability=liabToEdit}}
   {{/if}}
 </div>
