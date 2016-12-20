@@ -5,12 +5,6 @@
     <p>Liabilities describes relation with other party</p>
   </div>
   {{liability-table liabilities=model.liabilities}}
-</div>
-
-<div class="panel panel-primary">
-	<button {{action "newLiability"}}
-		type="button" class="btn btn-primary">New liability</button>
-	{{#if isNewLiab}}
-    {{liability-editor liability=liabToEdit}}
-  {{/if}}
+  <button {{action "newLiability"}}
+		  type="button" class="btn btn-primary">New liability</button>
 </div>
