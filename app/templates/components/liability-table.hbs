@@ -6,7 +6,7 @@
     <th>Actions</th>
   </tr>
   {{#each liabilities as |liability|}}
-    {{liability-form liability=liability onEdit=editLiab}}
+    {{liability-form liability=liability onEditButton=(action 'editLiab')}}
   {{/each}}
 </table>
 {{#if isEditMode}}
