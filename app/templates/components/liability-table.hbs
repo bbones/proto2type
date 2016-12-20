@@ -4,9 +4,11 @@
     <th>Party</th>
     <th>Amount</th>
     <th>Actions</th>
-
   </tr>
   {{#each liabilities as |liability|}}
-    {{liability-form liability=liability}}
+    {{liability-form liability=liability onEdit=editLiab}}
   {{/each}}
 </table>
+{{#if isEditMode}}
+  {{liability-editor liabForEdit=liabForEdit}}
+{{/if}}
