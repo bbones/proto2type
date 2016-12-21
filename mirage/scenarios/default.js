@@ -1,7 +1,7 @@
-export default function(server) {
+export default function( server ) {
 
   // Makes debugging easier
-  window.mirage = server;
+    window.mirage = server;
 
   /*
     Seed your development database using your factories.
@@ -9,6 +9,8 @@ export default function(server) {
 
     Make sure to define a factory for each model you want to create.
   */
+
+  // server.createList('post', 10);
   console.log('generating users');
   server.createList('user', 10);
   console.log('loading cash flow lines');
@@ -19,4 +21,5 @@ export default function(server) {
   server.loadFixtures('enterprises');
   console.log('loading liabilities');
   server.loadFixtures('liabilities');
+
 }
