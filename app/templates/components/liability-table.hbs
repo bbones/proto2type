@@ -9,6 +9,7 @@
     {{liability-form liability=liability onEditButton=(action 'editLiab')}}
   {{/each}}
 </table>
+{{table-navigator}}
 {{#if isEditMode}}
   {{liability-editor liabForEdit=liabForEdit}}
 {{/if}}
