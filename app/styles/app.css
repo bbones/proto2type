@@ -18,3 +18,10 @@ table {
 .tree-item-capture {
   text-align: left;
 }
+
+.detail-form {
+    background-color: lightgrey;
+    border: 5px solid green;
+    padding: 25px;
+    margin: 2px;
+}

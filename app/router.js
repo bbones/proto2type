@@ -13,7 +13,11 @@ Router.map(function() {
   this.route('users');
   this.route('treasury');
   this.route('costcenters');
-  this.route('enterprises');
+  this.route('enterprises', function() {
+    this.route('enterprise', { path: '/:enterprise_id' }, function() {
+      this.route('liabilities');
+    });
+  });
   this.route('persons');
   this.route('liabilities');
   this.route('payments');

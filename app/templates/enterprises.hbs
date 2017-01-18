@@ -1,6 +1,6 @@
 <h2>Enterprises</h2>
 
-<table id="accountList">
+<table id="enterpiseList">
 	<tr>
 		<th>Id</th>
 		<th>Name</th>
@@ -8,7 +8,13 @@
   {{#each model as |enterprise|}}
   <tr>
 		<td class="tree-item-capture">{{enterprise.id}}</td>
-    <td class="tree-item-capture">{{enterprise.name}}</td>
+    <td class="tree-item-capture">
+			{{#link-to "enterprises.enterprise" enterprise class="button"}}
+				{{enterprise.name}}
+			{{/link-to}}
+		</td>
   </tr>
   {{/each}}
 </table>
+
+{{outlet}}

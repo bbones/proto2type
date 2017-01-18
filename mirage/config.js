@@ -27,6 +27,8 @@ export default function() {
 
     this.get('/liabilities');
 
+    this.get('/liabilities/:id');
+
     this.delete('/liabilities/:id');
 
     this.get('/balance-lines');
@@ -34,6 +36,8 @@ export default function() {
     this.get('/users');
 
     this.get('/enterprises');
+    this.get('/enterprises/:id');
+    this.get('/enterprises/:id/liabilities');
 
     this.get('/costcenters');
 }
