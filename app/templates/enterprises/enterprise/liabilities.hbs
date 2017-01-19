@@ -1,8 +1,16 @@
-<div class="detail-form">
-  {{#each model as |liability|}}
-  <tr>
-		<td class="tree-item-capture">{{liability.id}}</td>
-    <td class="tree-item-capture">{{liability.amount}}</td>
-  </tr>
-  {{/each}}
-</div>
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+				<th>Id</th>
+				<th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+			{{#each model as |liability|}}
+      <tr>
+				<td>{{liability.id}}</td>
+        <td>{{liability.amount}}</td>
+      </tr>
+			{{/each}}
+    </tbody>
+  </table>

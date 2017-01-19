@@ -2,16 +2,12 @@
   {{#link-to "enterprises" class="button"}}
     Hide details
   {{/link-to}}
-  <table id="enterpiseData">
-    <tr>
-  		<th>Id</th>
-      <td class="tree-item-capture">{{model.id}}</td>
-      <th>Name</th>
-      <td class="tree-item-capture">
-        {{model.name}}
-      </td>
-    </tr>
-  </table>
+
+  {{#bs-form formLayout="horizontal" action="submit"}}
+    {{bs-form-element controlType="text" label="id" placeholder="id" value=model.id disabled="true"}}
+    {{bs-form-element controlType="text" label="Name" placeholder="name" value=model.name}}
+    {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+  {{/bs-form}}
 
   {{outlet}}
 

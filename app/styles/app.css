@@ -20,8 +20,7 @@ table {
 }
 
 .detail-form {
-    background-color: lightgrey;
     border: 5px solid green;
-    padding: 25px;
+    padding: 10px;
     margin: 2px;
 }
