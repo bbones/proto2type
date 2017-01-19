@@ -1,8 +1,15 @@
 <div class="detail-form">
-  <table id="enterpiseList">
+  {{#link-to "enterprises" class="button"}}
+    Hide details
+  {{/link-to}}
+  <table id="enterpiseData">
     <tr>
-  		<th>Id</th> <td class="tree-item-capture">{{model.id}}</td>
-      <th>Name</th> <td class="tree-item-capture">{{model.name}}</td>
+  		<th>Id</th>
+      <td class="tree-item-capture">{{model.id}}</td>
+      <th>Name</th>
+      <td class="tree-item-capture">
+        {{model.name}}
+      </td>
     </tr>
   </table>
 

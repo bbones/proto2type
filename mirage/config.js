@@ -25,11 +25,25 @@ export default function() {
   */
     this.get('/cflines');
 
-    this.get('/liabilities');
+    // this.get('/liabilities/?enterpriseId=:id');
 
-    this.get('/liabilities/:id');
+    this.get('/liabilities', (schema, request)=>{
+      if (request.queryParams.enterpriseId !== undefined) {
+        return {
+          data : schema.db.liabilities
+            .where({enterpriseId : request.queryParams.enterpriseId})
+              .map(attrs => (
+                { type: 'liabilities', id: attrs.id, attributes: attrs }
+              ))
+        }
+      }
+      else {
+          return {data : schema.db.liabilities.map(attrs => (
+                { type: 'liabilities', id: attrs.id, attributes: attrs }
+              ))};
+        }
+    });
 
-    this.delete('/liabilities/:id');
 
     this.get('/balance-lines');
 
