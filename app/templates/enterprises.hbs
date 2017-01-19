@@ -1,20 +1,49 @@
 <h2>Enterprises</h2>
 
-<table id="enterpiseList">
-	<tr>
-		<th>Id</th>
-		<th>Name</th>
-	</tr>
-  {{#each model as |enterprise|}}
-  <tr>
-		<td class="tree-item-capture">{{enterprise.id}}</td>
-    <td class="tree-item-capture">
-			{{#link-to "enterprises.enterprise.liabilities" enterprise class="button"}}
-				{{enterprise.name}}
-			{{/link-to}}
-		</td>
-  </tr>
-  {{/each}}
+<table class="table table-bordered table-stripped">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+	  {{#each model as |enterprise|}}
+	  <tr>
+			<td>{{enterprise.id}}</td>
+	    <td>
+				{{#link-to "enterprises.enterprise.liabilities" enterprise class="button"}}
+					{{enterprise.name}}
+					<span class="pointer glyphicon glyphicon glyphicon-sunglasses"></span>
+				{{/link-to}}
+			</td>
+	  </tr>
+
+	  {{/each}}
+	</tbody>
 </table>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Debbie</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>John</td>
+      </tr>
+    </tbody>
+  </table>
 
 {{outlet}}

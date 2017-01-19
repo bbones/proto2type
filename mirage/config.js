@@ -35,7 +35,7 @@ export default function() {
               .map(attrs => (
                 { type: 'liabilities', id: attrs.id, attributes: attrs }
               ))
-        }
+        };
       }
       else {
           return {data : schema.db.liabilities.map(attrs => (
