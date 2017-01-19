@@ -4,8 +4,10 @@
   {{/link-to}}
 
   {{#bs-form formLayout="horizontal" action="submit"}}
-    {{bs-form-element controlType="text" label="id" placeholder="id" value=model.id disabled="true"}}
-    {{bs-form-element controlType="text" label="Name" placeholder="name" value=model.name}}
+    {{bs-form-element controlType="text" label="id" placeholder="id"
+        value=model.id disabled="true"}}
+    {{bs-form-element controlType="text" label="Name" placeholder="name"
+        value=model.name}}
     {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
   {{/bs-form}}
 
