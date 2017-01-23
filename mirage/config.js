@@ -25,7 +25,7 @@ export default function() {
   */
     this.get('/cflines');
 
-    // this.get('/liabilities/?enterpriseId=:id');
+    // this.get('/liabilities');
 
     this.get('/liabilities', (schema, request)=>{
       if (request.queryParams.enterpriseId !== undefined) {
@@ -38,7 +38,7 @@ export default function() {
         };
       }
       else {
-          return {data : schema.db.liabilities.map(attrs => (
+        return {data : schema.db.liabilities.map(attrs => (
                 { type: 'liabilities', id: attrs.id, attributes: attrs }
               ))};
         }
