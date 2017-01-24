@@ -28,6 +28,7 @@ export default function() {
     // this.get('/liabilities');
 
     this.get('/liabilities', (schema, request)=>{
+      console.log(request);
       if (request.queryParams.enterpriseId !== undefined) {
         return {
           data : schema.db.liabilities
@@ -38,10 +39,26 @@ export default function() {
         };
       }
       else {
-        return {data : schema.db.liabilities.map(attrs => (
-                { type: 'liabilities', id: attrs.id, attributes: attrs }
-              ))};
+
+        return {
+          data : schema.db.liabilities.map(attrs => (
+                { type: 'liabilities', id: attrs.id,
+                    attributes: attrs,
+                    relationships: {
+                      enterprise : {
+                        data : {
+                          type: 'enterprises',
+                          id : attrs.enterpriseId
+                        }
+                      }
+                    }
+                }
+              )),
+          included : schema.db.enterprises.map(attrs => (
+                { type: 'enterprises', id: attrs.id, attributes: attrs }
+          ))
         }
+      } //else
     });
 
 
