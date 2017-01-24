@@ -19,7 +19,9 @@ Router.map(function() {
     });
   });
   this.route('persons');
-  this.route('liabilities');
+  this.route('liabilities', function() {
+    this.route('liability', { path: '/:liability_id' });
+  });
   this.route('payments');
   this.route('cflines');
 });

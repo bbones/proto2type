@@ -57,7 +57,7 @@ export default function() {
           included : schema.db.enterprises.map(attrs => (
                 { type: 'enterprises', id: attrs.id, attributes: attrs }
           ))
-        }
+        };
       } //else
     });
 
