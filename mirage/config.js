@@ -25,7 +25,7 @@ export default function() {
   */
     this.get('/cflines');
 
-    // this.get('/liabilities');
+    this.get('/liabilities/:id');
 
     this.get('/liabilities', (schema, request)=>{
       console.log(request);
