@@ -1,0 +1,26 @@
+<h2>Enterprises</h2>
+
+{{aupac-ember-data-typeahead modelClass='party' action=(action (mut selection))}}
+
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+				<th>Id</th>
+				<th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+			{{#each model as |party|}}
+      <tr>
+				<td>{{party.id}}</td>
+        <td>
+					{{#link-to "parties.party.liabilities" enterprise class="button"}}
+						{{party.name}}
+					{{/link-to}}
+				</td>
+      </tr>
+			{{/each}}
+    </tbody>
+  </table>
+
+{{outlet}}

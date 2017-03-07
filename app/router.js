@@ -25,6 +25,7 @@ Router.map(function() {
   this.route('payments');
   this.route('cflines');
   this.route('payplan');
+  this.route('parties');
 });
 
 export default Router;
