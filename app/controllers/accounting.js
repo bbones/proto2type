@@ -5,9 +5,9 @@ export default Ember.Controller.extend({
   balanceDetails: false,
   accountList: false,
   actions: {
-    changeBalanceDetail: function (){
+    changeBalanceDetail: function () {
       this.toggleProperty('balanceDetails')
-      if (this.balanceDetails) { 
+      if (this.balanceDetails) {
 				$("#btnChngBlDt").html(' - ')
 			}	else {$("#btnChngBlDt").html(' + ')}
     },
