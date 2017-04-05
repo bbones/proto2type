@@ -8,19 +8,18 @@ export default Ember.Controller.extend({
     changeBalanceDetail: function () {
       this.toggleProperty('balanceDetails')
       if (this.balanceDetails) {
-				$("#btnChngBlDt").html(' - ')
-			}	else {$("#btnChngBlDt").html(' + ')}
+        $('#btnChngBlDt').html(' - ')
+      } else { $('#btnChngBlDt').html(' + ') }
     },
 
     changeAccountList: function () {
-			this.toggleProperty('accountList')
-		},
+      this.toggleProperty('accountList')
+    },
 
-		toggleBody () {
-		 console.log('model')
-		 console.log(this.model)
-		 console.log(this.model.content)
-	 	}
-
-	}
+    toggleBody () {
+      console.log('model')
+      console.log(this.model)
+      console.log(this.model.content)
+    }
+  }
 })
