@@ -5,6 +5,11 @@ export default Ember.Controller.extend({
     submit: function () {
       console.log('submit', this.model.get('id'))
       this.model.save()
+    },
+    delete: function () {
+      console.log('delete', this.model.get('id'))
+      this.model.destroyRecord()
     }
+
   }
 })

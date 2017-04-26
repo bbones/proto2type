@@ -8,8 +8,11 @@
         value=model.id disabled="true"}}
     {{bs-form-element controlType="text" label="Name" placeholder="name"
         value=model.name}}
-    {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
   {{/bs-form}}
+  {{bs-button defaultText="Submit" type="primary"
+    buttonType="submit" action="submit"}}
+  {{bs-button defaultText="Delete" type="primary" buttonType="delete"
+    action="delete"}}
 
   {{outlet}}
 
