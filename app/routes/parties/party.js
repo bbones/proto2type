@@ -6,8 +6,13 @@ export default Ember.Route.extend({
     return this.store.findRecord('party', params.party_id)
   },
   actions: {
-    submit: () => {
-      console.log('Popuped')
+    submit: function () {
+      console.log('submit')
+      this.get('controller').get('model').save()
+    },
+    delete: function () {
+      console.log('delete')
+      this.get('controller').get('model').destroyRecord()
     }
   }
 })
