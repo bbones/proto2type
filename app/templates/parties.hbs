@@ -17,10 +17,4 @@
   {{/each}}
 </ul>
 
-<select>
-  {{#each searchRepo.lastSuccessful.value as |party|}}
-  <option value={{party.id}}>{{party.name}}</option>
-  {{/each}}
-</select>
-
 {{outlet}}
